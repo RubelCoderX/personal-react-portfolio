@@ -21,7 +21,7 @@ const Navbar = () => {
     return (
         <header className='container mx-auto fixed left-0 top-0 right-0'>
             <nav className={`py-4 md:px-12 px-4 bg-white ${isSticky ? "sticky top-0 right-0 left-0 bg-white":""}`}>
-                <div className='flex justify-between items-center mt-10'>
+                <div className='flex justify-between items-center '>
                         <div className=''>
                         <h2 className='text-4xl font-semibold'>Portfolio</h2>
                         </div>

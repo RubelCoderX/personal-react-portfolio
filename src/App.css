@@ -4,3 +4,6 @@
   @apply px-4 py-4 bg-transparent border text-primary border-primary rounded
   hover:bg-primary hover:text-white transition-all duration-300;
 }
+.btnPrimary{
+  @apply bg-primary px-8 py-3 hover:bg-body transition-all duration-300 hover:-translate-y-4 text-white text-xl rounded-md
+}
