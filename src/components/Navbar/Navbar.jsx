@@ -26,6 +26,7 @@ const Navbar = () => {
                         <h2 className='text-4xl font-semibold'>Portfolio</h2>
                         </div>
                         <div className='lg:flex items-center text-lg gap-3 hidden'>
+                            <a href="/" className='block cursor-pointer px-4  hover:text-gray-400'>Home</a>
                             <a href="/" className='block cursor-pointer px-4 text-primary  hover:text-gray-400'>Statistics</a>
                             <a href="/"  className='block cursor-pointer px-4 hover:text-gray-400'>Applied Jobs</a>
                             <a href="/"  className='block cursor-pointer px-4 hover:text-gray-400'>Blog</a>
