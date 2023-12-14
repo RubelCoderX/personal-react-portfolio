@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
@@ -19,17 +20,17 @@ const Navbar = () => {
         })
 
     return (
-        <header className='container mx-auto fixed left-0 top-0 right-0'>
+        <header className=' fixed left-0 top-0 right-0'>
             <nav className={`py-4 md:px-12 px-4 bg-white ${isSticky ? "sticky top-0 right-0 left-0 bg-white":""}`}>
-                <div className='flex justify-between items-center '>
+                <div className='container mx-auto flex justify-between items-center '>
                         <div className=''>
                         <h2 className='text-4xl font-semibold'>Portfolio</h2>
                         </div>
                         <div className='lg:flex items-center text-lg gap-3 hidden'>
-                            <a href="/" className='block cursor-pointer px-4  hover:text-gray-400'>Home</a>
-                            <a href="/" className='block cursor-pointer px-4 text-primary  hover:text-gray-400'>Statistics</a>
-                            <a href="/"  className='block cursor-pointer px-4 hover:text-gray-400'>Applied Jobs</a>
-                            <a href="/"  className='block cursor-pointer px-4 hover:text-gray-400'>Blog</a>
+                            <Link to="/" className='block cursor-pointer px-4  hover:text-gray-400'>Home</Link>
+                            <Link to="/statistics" className='block cursor-pointer px-4 text-primary  hover:text-gray-400'>Statistics</Link>
+                            <Link to="/applied"  className='block cursor-pointer px-4 hover:text-gray-400'>Applied Jobs</Link>
+                            <Link to="/blog"  className='block cursor-pointer px-4 hover:text-gray-400'>Blog</Link>
                         </div>
                          {/* btn for large device */}
                         <div className='lg:block hidden'>
@@ -44,6 +45,7 @@ const Navbar = () => {
 
                 {
                     isMenuOpen && <div className='mt-4 bg-body text-white rounded-lg p-4'>
+                            <a href="/" className='block cursor-pointer px-4 hover:text-gray-400'>Home</a>
                             <a href="/" className='block cursor-pointer px-4 hover:text-gray-400'>Statistics</a>
                             <a href="/"  className='block cursor-pointer px-4 hover:text-gray-400'>Applied Jobs</a>
                             <a href="/"  className='block cursor-pointer px-4 hover:text-gray-400'>Blog</a>

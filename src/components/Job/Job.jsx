@@ -22,7 +22,9 @@ const Job = ({job}) => {
                 <p className='flex mt-4 text-gray-400'><AiOutlineDollar className='text-2xl'></AiOutlineDollar>{salary}</p>
             </div>
             <div className='mt-10'>
-                <button className='btnPrimary'>View Details</button>
+                <Link to={`/job/${id}`}>
+                   <button className='btnPrimary'>View Details</button>
+                </Link>
             </div>
         </div>
     );
