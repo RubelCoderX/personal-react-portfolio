@@ -10,6 +10,7 @@ export default {
         'primary':'#7E90FE',
         'body': '#1C1E53',
         'bgShade':'#F5FCFF',
+        'footerColor':'#1A1919',
       }
     },
   },
