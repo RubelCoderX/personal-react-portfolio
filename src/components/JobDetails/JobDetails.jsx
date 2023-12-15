@@ -2,14 +2,21 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { AiOutlineDollar,AiFillCalendar,AiOutlineMobile,AiFillMail } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
+import { saveJobApplication } from '../utility/localstorage';
+import { toast } from 'react-toastify';
 
 const JobDetails = () => {
     const jobs = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id === idInt);
-    console.log(job)
+    // console.log(job)
     // console.log(jobs)
+    const handleApplyJob = () =>{
+        saveJobApplication(idInt);
+        toast('You have applied successfully');
+    }
+    // console.log(handleApplyJob);
     return (
         <div className='mt-40 container mx-auto'>
             
@@ -38,7 +45,7 @@ const JobDetails = () => {
                         <h4 className='flex text-xl items-center p-4'><AiOutlineMobile className='text-3xl text-primary mr-1'/>Phone : <p className='text-gray-500 ml-1'>{job.contact_information.phone}</p></h4>
                         <h4 className='flex text-xl items-center px-4'><AiFillMail className='text-3xl text-primary mr-1'/> Email: <p className='text-gray-500 ml-1'>{job.contact_information.email}</p></h4>
                         <h4 className='flex text-xl items-center p-4'><MdLocationOn className='text-3xl text-primary mr-1'/>Address: <p className='text-gray-500 ml-1'>{job.contact_information.address}</p> </h4>
-                        <button className='btnPrimary w-full'>Apply Now</button>
+                        <button onClick={handleApplyJob} className='btnPrimary w-full'>Apply Now</button>
                         
                     </div>
                    
